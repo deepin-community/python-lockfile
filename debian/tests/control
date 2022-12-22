@@ -1,0 +1,16 @@
+# debian/tests/control
+# Control file for Debian ‘autopkgtests’.
+# Documentation: ‘/usr/share/doc/autopkgtest/README.package-tests.rst.gz’
+
+Tests: smoke-python3
+Depends:
+    python3-all,
+    python3-pkg-resources,
+    python3-lockfile
+
+
+# Local variables:
+# coding: utf-8
+# mode: conf
+# End:
+# vim: fileencoding=utf-8 filetype=conf :

@@ -1,0 +1,18 @@
+# debian/watch
+# Debian uscan file for ‘python-lockfile’ package.
+# Manpage: ‘uscan(1)’
+
+# Compulsory line, this is a version 3 file.
+version=3
+
+# Current version from Python Package Index.
+opts=uversionmangle=s/(\d)((?:a|b|c|rc)\d*)$/$1~$2/ \
+    http://pypi.debian.net/lockfile/lockfile-(\S+)\.tar\.(?:gz|bz2|xz) \
+    debian
+
+
+# Local variables:
+# coding: utf-8
+# mode: conf
+# End:
+# vim: fileencoding=utf-8 filetype=conf :

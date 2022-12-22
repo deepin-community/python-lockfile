@@ -1,0 +1,15 @@
+Document: python-lockfile
+Title: lockfile Python library documentation
+Author: Skip Montanaro
+Abstract: Programmer documentation for the Python ‘lockfile’ library.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-lockfile-doc/html/index.html
+Files:
+    /usr/share/doc/python-lockfile-doc/html/*.html
+    /usr/share/doc/python-lockfile-doc/html/*.js
+    /usr/share/doc/python-lockfile-doc/html/_static/*
+
+Format: Text
+Files: /usr/share/doc/python-lockfile-doc/index.rst.gz

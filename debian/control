@@ -1,0 +1,57 @@
+Source: python-lockfile
+Priority: optional
+Maintainer: Ben Finney <bignose@debian.org>
+Section: python
+Homepage: https://pypi.python.org/pypi/lockfile/
+Build-Depends:
+    debhelper (>= 9~),
+    dh-python,
+    python3-setuptools,
+    python3-pbr (>= 1.8),
+    python3-nose,
+    python3-sphinx,
+    python3-all,
+Standards-Version: 3.9.8
+VCS-Git: https://notabug.org/bignose/debian_python-lockfile.git
+VCS-Browser: https://notabug.org/bignose/debian_python-lockfile/
+
+Package: python3-lockfile
+Architecture: all
+Depends:
+    ${python3:Depends},
+    ${misc:Depends}
+Suggests: python-lockfile-doc
+Description: file locking library for Python — Python 3 library
+ The ‘lockfile’ library exports a ‘LockFile’ class which provides a
+ simple API for locking files.
+ .
+ The appropriate implementation for ‘LockFile’ is chosen automatically
+ based on the OS capabilities for an atomic filesystem operation.
+ These implementations are also available for explicit use as
+ ‘LinkLockFile’ and ‘MkdirLockFile’.
+ .
+ Other back ends are possible with the same semantics. Examples
+ included are:
+  * ‘SQLiteLockFile’, using records in an SQLite database.
+  * ‘PIDLockFile’, using the semantics of a Unix PID file.
+ .
+ Unlike other Python locking libraries (the Windows ‘msvcrt.locking’
+ function, the Unix ‘fcntl.flock’, ‘fcntl.lockf’, and the deprecated
+ ‘posixfile’ module), the API is identical across both Unix (including
+ GNU/Linux and MacOS) and Windows platforms.
+ .
+ This package installs the Python 3 library.
+
+Package: python-lockfile-doc
+Section: doc
+Architecture: all
+Depends:
+    ${sphinxdoc:Depends},
+    ${misc:Depends}
+Recommends: python3-lockfile
+Description: file locking library for Python — documentation
+ The ‘lockfile’ library exports a ‘LockFile’ class which provides a
+ simple API for locking files.
+ .
+ This package installs the API documentation, in plain text and
+ rendered as HTML.
